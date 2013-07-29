@@ -100,7 +100,7 @@ function propertyPlan(idx, prop, op, value, negate) {
 }
 
 function takeTwo(path) {
-  if (path.length > 2) return path.slice(2);
+  if (path.length > 2) return path.slice(-2);
   return path;
 }
 
@@ -178,8 +178,8 @@ function pairsPlan(idx, prop, op, value, negate) {
       .pipe(indexFilterStream());
 
     case '$mod':
-      return db.indexes[idx].createIndexStream()
-      .pipe(indexFilterStream());
+      // the index size will be comparable with the data read, just table scan
+      return null;
   }
 
   return null;

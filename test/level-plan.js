@@ -325,12 +325,11 @@ describe('level-plan', function() {
       },
       {
            query: { num: { $mod: [200, 0] } },
-        expected: { indexHits: 12, dataHits: 6, matchHits: 5 }
+        expected: { indexHits: 0, dataHits: 100, matchHits: 5 }
       },
-    /*
       {
            query: { $not: { num: { $mod: [200, 0] } } },
-        expected: { indexHits: 95, dataHits: 95, matchHits: 95 }
+        expected: { indexHits: 0, dataHits: 100, matchHits: 95 }
       },
       {
            query: { num: { $in: [420, 70] } },
@@ -346,11 +345,11 @@ describe('level-plan', function() {
       },
       {
            query: { tagsNoIndex: { $all: ['tag2', 'tag4'] } },
-        expected: { indexHits: 0, dataHits: 100, matchHits: 1 }
+        expected: { indexHits: 1, dataHits: 1, matchHits: 1 }
       },
       {
         query: { treeNoIndex: { $elemMatch: { a: 42, b: 43 } } },
-        expected: { indexHits: 0, dataHits: 100, matchHits: 1 }
+        expected: { indexHits: 1, dataHits: 1, matchHits: 1 }
       },
       {
         query: { tree: { $elemMatch: { a: 42, b: 43 } } },
@@ -370,7 +369,7 @@ describe('level-plan', function() {
       },
       {
         query: { numNoIndex: { $and: [ { $gte: 100 }, { $lte: 200 } ] }},
-        expected: { indexHits: 0, dataHits: 100, matchHits: 11 }
+        expected: { indexHits: 11, dataHits: 11, matchHits: 11 }
       },
       {
         query: { num: { $not: { $gte: 100 } } },
@@ -378,7 +377,7 @@ describe('level-plan', function() {
       },
       {
         query: { numNoIndex: { $not: { $gte: 100 } } },
-        expected: { indexHits: 0, dataHits: 100, matchHits: 10 }
+        expected: { indexHits: 10, dataHits: 10, matchHits: 10 }
       },
       {
         query: { 'tree.a': 42 },
@@ -386,7 +385,7 @@ describe('level-plan', function() {
       },
       {
         query: { 'tree.b': 43 },
-        expected: { indexHits: 0, dataHits: 100, matchHits: 1 }
+        expected: { indexHits: 1, dataHits: 1, matchHits: 1 }
       },
       {
            query: { 'name': /^name 42$/ },
@@ -396,7 +395,6 @@ describe('level-plan', function() {
            query: { 'name': /^name 4/ },
         expected: { indexHits: 11, dataHits: 11, matchHits: 11 }
       },
-      */
     ];
 
     db = levelQuery(db);
