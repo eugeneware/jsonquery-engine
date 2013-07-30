@@ -38,6 +38,6 @@
     "levelup": "~0.12.0",
     "leveldown": "~0.6.2",
     "byteup": "~0.1.1",
-    "level-queryengine": "0.0.1"
+    "level-queryengine": "~0.0.2"
   }
 }
