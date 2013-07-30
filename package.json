@@ -1,6 +1,6 @@
 {
   "name": "jsonquery-engine",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "level-queryengine plugin to query levelup/leveldb using indexes with the mongodb query syntax (through the jsonquery module)",
   "main": "index.js",
   "scripts": {
