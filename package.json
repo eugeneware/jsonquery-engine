@@ -28,7 +28,9 @@
   "dependencies": {
     "jsonquery": "~0.1.0",
     "through": "~2.3.4",
-    "pairs": "0.0.1"
+    "pairs": "0.0.1",
+    "joiner-stream": "0.0.1",
+    "and-stream": "0.0.1"
   },
   "devDependencies": {
     "chai": "~1.7.2",
