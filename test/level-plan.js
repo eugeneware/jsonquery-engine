@@ -190,6 +190,10 @@ describe('level-plan', function() {
            query: { 'name': /^name 4/ },
         expected: { indexHits: 11, dataHits: 11, matchHits: 11 }
       },
+      {
+           query: { 'nothing': undefined },
+        expected: { indexHits: 0, dataHits: 100, matchHits: 100 }
+      },
     ];
 
     db = levelQuery(db);
@@ -395,6 +399,10 @@ describe('level-plan', function() {
            query: { 'name': /^name 4/ },
         expected: { indexHits: 11, dataHits: 11, matchHits: 11 }
       },
+      {
+           query: { 'nothing': undefined },
+        expected: { indexHits: 0, dataHits: 100, matchHits: 100 }
+      },
     ];
 
     db = levelQuery(db);
@@ -461,6 +469,7 @@ function testData() {
       tagsNoIndex: [
         'tag1', 'tag2', 'tag3'
       ],
+      nothing: undefined,
       tree: {
         a: i,
         b: i + 1,

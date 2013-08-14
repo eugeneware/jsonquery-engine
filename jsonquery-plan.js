@@ -17,7 +17,9 @@ function optimizerMatch (predicate, negate, plan) {
   var sources = [];
   for (var n in predicate) {
     var v = predicate[n];
-    if (n[0] === '$') {
+    if (v === undefined) {
+      // do nothing
+    } else if (n[0] === '$') {
       idxStream = optimizerOperator(n, v, negate, plan);
       if (idxStream) sources.push(idxStream);
     } else if (v.constructor === Object) {
