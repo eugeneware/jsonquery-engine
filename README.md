@@ -5,6 +5,8 @@ implementation **with INDEXES** for querying your levelup/leveldb database.
 
 This is a plugin for [level-queryengine](https://github.com/eugeneware/level-queryengine).
 
+[![build status](https://secure.travis-ci.org/eugeneware/jsonquery-engine.png)](http://travis-ci.org/eugeneware/jsonquery-engine)
+
 # Installation
 
 Install through npm:

@@ -1,6 +1,6 @@
 {
   "name": "jsonquery-engine",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "level-queryengine plugin to query levelup/leveldb using indexes with the mongodb query syntax (through the jsonquery module)",
   "main": "index.js",
   "scripts": {
@@ -26,11 +26,11 @@
   "author": "Eugene Ware <eugene@noblesamurai.com>",
   "license": "BSD",
   "dependencies": {
-    "jsonquery": "~0.1.2",
+    "jsonquery": "~0.1.3",
     "through": "~2.3.4",
-    "pairs": "0.0.1",
-    "joiner-stream": "0.0.1",
-    "and-stream": "0.0.1"
+    "pairs": "0.0.2",
+    "joiner-stream": "0.0.2",
+    "and-stream": "0.0.2"
   },
   "devDependencies": {
     "chai": "~1.7.2",
