@@ -1,5 +1,5 @@
 var expect = require('chai').expect,
-    bytewise = require('byteup')(),
+    bytewise = require('bytewise'),
     levelup = require('levelup'),
     path = require('path'),
     pairs = require('pairs'),
@@ -25,7 +25,7 @@ describe('level-plan', function() {
 
   beforeEach(function(done) {
     rimraf.sync(dbPath);
-    db = levelup(dbPath, { keyEncoding: 'bytewise', valueEncoding: 'json' }, done);
+    db = levelup(dbPath, { valueEncoding: 'json' }, done);
   });
 
   afterEach(function(done) {
