@@ -33,13 +33,14 @@
     "and-stream": "0.0.2"
   },
   "devDependencies": {
-    "chai": "~1.7.2",
-    "mocha": "~1.12.0",
+    "chai": "^1.9.1",
+    "mocha": "^1.18.2",
     "rimraf": "~2.2.2",
     "after": "~0.8.1",
-    "levelup": "~0.12.0",
-    "leveldown": "~0.6.2",
-    "byteup": "~0.1.1",
-    "level-queryengine": "~0.1.0"
+    "levelup": "^0.18.3",
+    "leveldown": "^0.10.2",
+    "level-queryengine": "^3.0.0",
+    "bytewise": "^0.7.0",
+    "pairs": "0.0.2"
   }
 }
