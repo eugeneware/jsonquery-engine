@@ -75,7 +75,7 @@ of any indexes for filtering **before** looking up values.
 // smart enough to use levelups sorted indexes to efficiently do range queries BEFORE fetching data
 { 'num': { $gte: 500 } }
 
-// smart engouh to turn these both into { 'num': { $lte: 500 } } and use and index range lookup
+// smart enough to turn these both into { 'num': { $lte: 500 } } and use and index range lookup
 { $not: { 'num': { $gte: 500 } } }
 { 'num': { $not: { $gte: 500 } } }
 
