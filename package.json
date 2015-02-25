@@ -40,7 +40,6 @@
     "levelup": "^0.18.3",
     "leveldown": "^0.10.2",
     "level-queryengine": "^3.0.0",
-    "bytewise": "^0.7.0",
-    "pairs": "0.0.2"
+    "bytewise": "^0.7.0"
   }
 }
