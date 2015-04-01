@@ -19,7 +19,7 @@ $ npm install jsonquery-engine
 
 ``` js
 var levelQuery = require('level-queryengine'),
-    jsonqqueryEngine = require('jsonquery-engine'),
+    jsonqueryEngine = require('jsonquery-engine'),
     pairs = require('pairs'),
     levelup = require('levelup'),
     db = levelQuery(levelup('my-db', { valueEncoding: 'json' }));
